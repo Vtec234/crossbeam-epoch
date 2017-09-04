@@ -35,7 +35,6 @@ extern crate scopeguard;
 #[macro_use]
 extern crate lazy_static;
 extern crate arrayvec;
-extern crate boxfnonce;
 extern crate crossbeam_utils;
 
 mod atomic;
@@ -44,6 +43,7 @@ mod garbage;
 mod epoch;
 mod global;
 mod sync;
+mod deferred;
 
 pub use self::atomic::{Atomic, CompareAndSetOrdering, Owned, Ptr};
 pub use self::global::{pin, is_pinned, unprotected};
